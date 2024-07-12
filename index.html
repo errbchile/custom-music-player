@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+    <style>
+      .player {
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <input type="file" id="fileInput" accept="audio/mp3" />
+      <br /><br />
+      <audio id="audioPlayer" controls>
+        Your browser does not support the audio element.
+      </audio>
+      <br />
+      <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+      <br />
+      <button onclick="playAudio()">Play</button>
+      <button onclick="pauseAudio()">Pause</button>
+      <button onclick="stopAudio()">Stop</button>
+      <button onclick="rewindAudio()">Rewind 10s</button>
+      <button onclick="forwardAudio()">Forward 10s</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
